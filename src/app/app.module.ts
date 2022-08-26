@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CustcreateComponent } from './custcreate/custcreate.component';
+import { RestaddComponent } from './restadd/restadd.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustcreateComponent } from './custcreate/custcreate.component';
     LoginComponent,
     RestaurantComponent,
     NavbarComponent,
-    CustcreateComponent
+    CustcreateComponent,
+    RestaddComponent
   ],
   imports: [
     BrowserModule,
