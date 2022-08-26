@@ -9,6 +9,9 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CustcreateComponent } from './custcreate/custcreate.component';
 import { RestaddComponent } from './restadd/restadd.component';
+import { BookingComponent } from './booking/booking.component';
+import { RestloginComponent } from './restlogin/restlogin.component';
+import { RestviewComponent } from './restview/restview.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { RestaddComponent } from './restadd/restadd.component';
     RestaurantComponent,
     NavbarComponent,
     CustcreateComponent,
-    RestaddComponent
+    RestaddComponent,
+    BookingComponent,
+    RestloginComponent,
+    RestviewComponent
   ],
   imports: [
     BrowserModule,
