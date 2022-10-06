@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FoodService } from '../food.service';
 
 @Component({
   selector: 'app-restadd',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaddComponent implements OnInit {
 
-  constructor() { }
+  restreg={
+    rname:"",
+    rid:"",
+    runame:"",
+    phoneno:"",
+    location:""
+  }
+
+  constructor(private api:FoodService) { }
 
   ngOnInit(): void {
+  }
+  restadd()
+  {
+    console.log(this.restreg)
+    this.api.Restadd(this.restreg).subscribe((restreg)=>{
+    })
+    alert("success");
   }
 
 }

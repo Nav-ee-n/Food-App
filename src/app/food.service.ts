@@ -12,4 +12,8 @@ export class FoodService {
   {
      return this.http.post<any>('http://localhost:3000/custcreate',sign)
   }
+  Restadd(restreg:any)
+  {
+    return this.http.post<any>('http://localhost:3000/restadd',restreg)
+  }
 }

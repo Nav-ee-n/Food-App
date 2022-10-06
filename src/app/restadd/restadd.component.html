@@ -6,31 +6,35 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
             <div class="row g-3">
+
+                <form #formnew="ngForm" (ngSubmit)="restadd()">
+
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>Restaurant Name:</b>
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" id="" class="form-control" [(ngModel)]="restreg.rname" name="restname">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>Restaurant ID:</b>
-                    <input type="number" name="" id="" class="form-control">
+                    <input type="number" id="" class="form-control" [(ngModel)]="restreg.rid" name="restid">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <b>Restaurant Owner Name:</b>
-                    <input type="text" name="" id="" class="form-control">
+                    <b>Restaurant User Name:</b>
+                    <input type="text" id="" class="form-control" [(ngModel)]="restreg.runame" name="restuname">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>Contact No:</b>
-                    <input type="number" name="" id="" class="form-control">
+                    <input type="number" id="" class="form-control" [(ngModel)]="restreg.phoneno" name="restphoneno">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>City:</b>
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" id="" class="form-control" [(ngModel)]="restreg.location" name="restlocation">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <button class="btn btn-success">Continue</button>
 
                 </div>
+            </form>
             </div>
 
 
