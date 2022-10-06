@@ -5,37 +5,34 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
+                <form #formnew="ngForm" (ngSubmit)="custcreate()">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>Phone No:</b>
-                    <input type="number" name="" placeholder="Enter Phone No:" id="" class="form-control">
+                    <input type="number"  placeholder="Enter Phone No:" id="" class="form-control" [(ngModel)]="sign.signphonenumber" name="number" >
 
                 </div>
                 
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>Name:</b>
-                    <input type="text" name="" placeholder="Enter Name" id="" class="form-control">
+                    <input type="text" placeholder="Enter Name" id="" class="form-control" [(ngModel)]="sign.signname" name="fullname">
                     
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>Email id:</b>
-                    <input type="email" name="" id="" placeholder="Enter Email ID:" class="form-control">
+                    <input type="email" id="" placeholder="Enter Email ID:" class="form-control" [(ngModel)]="sign.signemail" name="email">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <b>Password:</b>
-                    <input type="password" name="" id="" placeholder="Password" class="form-control">
+                    <input type="password" id="" placeholder="Password" class="form-control" [(ngModel)]="sign.signpassword" name="password">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <button class="btn btn-success">Continue</button>
 
                 </div>
+                </form>
             </div>
-
-
-
-
-
         </div>
     </div>
 </div>

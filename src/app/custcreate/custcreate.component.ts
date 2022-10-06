@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FoodService } from '../food.service';
 
 @Component({
   selector: 'app-custcreate',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustcreateComponent implements OnInit {
 
-  constructor() { }
+  sign={
+    signphonenumber:"",
+    signname:"",
+    signemail:"",
+    signpassword:""
+  }
+
+  constructor(private api:FoodService) { }
 
   ngOnInit(): void {
+  }
+  custcreate()
+  {
+    console.log(this.sign)
+    this.api.Custcreate(this.sign).subscribe((data)=>{
+    })
+    alert("success");
   }
 
 }
