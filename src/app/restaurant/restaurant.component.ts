@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FoodService } from '../food.service';
 
 @Component({
   selector: 'app-restaurant',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantComponent implements OnInit {
 
-  constructor() { }
+  restreg={
+    rname:"",
+    rid:""
+  }
+
+  constructor(private api:FoodService,private router:Router) { }
 
   ngOnInit(): void {
+  }
+  Rlogin(){
+    this.api.rlogin(this.restreg).subscribe((restreg)=>{
+      if(restreg.success === true){
+        this.router.navigate(['/restlogin'])
+      }
+      else{
+        alert(restreg.success)
+      }
+    })
   }
 
 }

@@ -16,4 +16,10 @@ export class FoodService {
   {
     return this.http.post<any>('http://localhost:3000/restadd',restreg)
   }
+  clogin(t3:any){
+    return this.http.post<any>('http://localhost:3000/login',t3)
+  }
+  rlogin(t2:any){
+    return this.http.post<any>('http://localhost:3000/restaurant',t2)
+  }
 }
