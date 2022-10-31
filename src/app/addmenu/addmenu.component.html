@@ -1,0 +1,56 @@
+
+
+<div class="container" >
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+              
+                
+                <div class="col col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 col-xxl-11">
+                  <div>
+                    
+                   
+                    <div>
+                    <div class="card border-secondary mb-3">
+                      <div class="card-body" >
+                 
+                 
+                   
+                      <form class="row g-3" #addmenu="ngForm" >
+
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="dId" class="label">Menu Id </label>
+                            <input id="dId" class="form-control" name="namefield" [(ngModel)]="menu.menuId">
+                            
+                          </div>
+                        
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                          <label for="dId" class="label">Food Name </label>
+                          <input id="dId" class="form-control" name="namefield" [(ngModel)]="menu.foodName">
+                          
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                          <label for="Bid" class="label">Food Price</label>
+                          <input id="dId" class="form-control" name="namefield" [(ngModel)]="menu.foodPrice">
+                         
+                        </div>
+                        
+                     
+                        
+                      
+                      <div >
+                        <button  class="btn btn-primary button" (click)="Addmenu()">Add Menu</button>
+                      </div>
+                      
+                      </form>
+                    </div>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+  </div>
+  

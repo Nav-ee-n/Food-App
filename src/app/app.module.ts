@@ -21,6 +21,9 @@ import { Rest3Component } from './rest3/rest3.component';
 import { RestableComponent } from './restable/restable.component';
 import { TableComponent } from './table/table.component';
 import { AdmintableComponent } from './admins/admintable/admintable.component';
+import { AddmenuComponent } from './addmenu/addmenu.component';
+import { MenutableComponent } from './menutable/menutable.component';
+import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { AdmintableComponent } from './admins/admintable/admintable.component';
     Rest3Component,
     RestableComponent,
     TableComponent,
-    AdmintableComponent
+    AdmintableComponent,
+    AddmenuComponent,
+    MenutableComponent,
+    AdminnavbarComponent
   ],
   imports: [
     BrowserModule,

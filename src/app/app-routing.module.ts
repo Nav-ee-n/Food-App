@@ -14,6 +14,8 @@ import { Rest3Component } from './rest3/rest3.component';
 import { Rest2Component } from './rest2/rest2.component';
 import { RestableComponent } from './restable/restable.component';
 import { AdmintableComponent } from './admins/admintable/admintable.component';
+import { MenutableComponent } from './menutable/menutable.component';
+import { AddmenuComponent } from './addmenu/addmenu.component';
 
 const routes: Routes = [{path:"",component:HomeComponent},
 {path:"login",component:LoginComponent},
@@ -29,6 +31,8 @@ const routes: Routes = [{path:"",component:HomeComponent},
 {path:"rest3",component:Rest3Component},
 {path:"restable",component:RestableComponent},
 {path:"admintable",component:AdmintableComponent},
+{path:"menutable",component:MenutableComponent},
+{path:"addmenu",component:AddmenuComponent}
 
 ];
 

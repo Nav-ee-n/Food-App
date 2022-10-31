@@ -21,42 +21,38 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>13</td>
-                <td>Available</td>
-                <td><button class="btn btn-primary">Book</button></td>
-
+                <tr *ngFor="let i of table">
+                  <th scope="row">
+                    <div *ngIf="i.isEdit">
+                      <input type="text" name="tid" class="form-control" [(ngModel)]="i.tableid">
+                    </div>
+                    <div *ngIf="!i.isEdit">
+                      {{i.tableid}}
+                    </div>
+                  </th>
+                  <td>
+                    <div *ngIf="i.isEdit">
+                      <input type="text" name="tno" class="form-control" [(ngModel)]="i.tableno">
+                    </div>
+                    <div *ngIf="!i.isEdit">
+                      {{i.tableno}}
+                    </div>
+                  </td>
+                  <td>
+                    <div *ngIf="i.isEdit">
+                      <input type="text" name="status" class="form-control" [(ngModel)]="i.book"  >
+                    </div>
+                    <div *ngIf="!i.isEdit">
+                      {{i.book}}
+                    </div>
+                  </td>
+                  
+                  <td>
+                    <button class="btn btn-primary" (click)="book(i)">Book</button>
+                  </td>
+            
+  
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>14</td>
-                <td>Available</td>
-                <td><button class="btn btn-primary">Book</button></td>
-
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>15</td>
-                <td>Available</td>
-                <td><button class="btn btn-primary">Book</button></td>
-
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>16</td>
-                <td>Available</td>
-                <td><button class="btn btn-primary">Book</button></td>
-
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>17</td>
-                <td>Available</td>
-                <td><button class="btn btn-primary">Book</button></td>
-
-              </tr>
-              
-          
 
             </tbody>
           </table>

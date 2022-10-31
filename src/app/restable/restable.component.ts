@@ -10,13 +10,21 @@ export class RestableComponent implements OnInit {
   table={
     tableid:"",
     tableno:"",
+    rname:""
   }
-
-  constructor(private api:FoodService) { }
+  log:any=[]
+  constructor(private api:FoodService) { 
+    this.log=this.api.getUser()
+    if(this.log){
+      console.log(this.log.rname)
+      this.table.rname=this.log.rname
+    }
+  }
 
   ngOnInit(): void {
   }
   submit(){
+    
     console.log(this.table)
     this.api.Submit(this.table).subscribe(
       (data)=>{

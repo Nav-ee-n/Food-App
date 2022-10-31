@@ -21,6 +21,9 @@ export class RestaurantComponent implements OnInit {
   Rlogin(){
     this.api.rlogin(this.restreg).subscribe((restreg)=>{
       if(restreg.success === true){
+        console.log(restreg)
+        console.log(restreg.restreg)
+        this.api.saveUser(restreg.restreg)
         this.router.navigate(['/restlogin'])
       }
       else{

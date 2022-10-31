@@ -2,42 +2,40 @@ import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../food.service';
 
 @Component({
-  selector: 'app-restlogin',
-  templateUrl: './restlogin.component.html',
-  styleUrls: ['./restlogin.component.css']
+  selector: 'app-menutable',
+  templateUrl: './menutable.component.html',
+  styleUrls: ['./menutable.component.css']
 })
-export class RestloginComponent implements OnInit {
+export class MenutableComponent implements OnInit {
   log:any=[]
-
-  constructor(private api:FoodService) { 
+  constructor(private api:FoodService) {
     this.log=this.api.getUser()
     console.log(this.log)
     if(this.log){
       console.log("hai")
       console.log(this.log)
     }
-    this.api.viewtable(this.log).subscribe(
+    this.api.viewmenu(this.log).subscribe(
       (data)=>{
         console.log(data)
-        this.table=data
+        this.menu=data
       }
     )
-  }
-  
+
+   }
 
   ngOnInit(): void {
-    
   }
-  unbook(i:any){
-    console.log(i)
-    this.api.unbooktable(i).subscribe(
+  Deletemenu(i:any){
+    this.api.deletemenu(i).subscribe(
       (data)=>{
         console.log(data)
-        this.table=data
+        window.location.reload()
+        
       }
     )
   }
 
-  table:any=[]
+  menu:any=[]
 
 }

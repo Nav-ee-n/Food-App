@@ -1,8 +1,4 @@
 
-<br><br>
-
-
-
 
 <br><br><br><br>
 
@@ -23,56 +19,51 @@
                         
                         
                     <h1 align="center">
-                      <small class="text-muted">Table Details</small>
+                      <small class="text-muted">Menu</small>
                     </h1>
                         
                         <hr >
                         
-                        
                         <table class="table" border="3">
-                          <thead>
-                            <tr>
-                              <th scope="col">SI No</th>
-                              <th scope="col">Table No</th>
-                              <th scope="col">Status</th>
-                              <th scope="col"><button class="btn btn-success"  routerLink="/restable" >Add table</button></th>
-                     
-              
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-      
-                              <tr *ngFor="let i of table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Menu Id</th>
+                                <th scope="col">Food Name</th>
+                                <th scope="col">Food Price</th>
+                                <th scope="col"><button class="btn btn-success"  routerLink="/addmenu" >Add Menu</button></th>
+                
+                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let i of menu">
                                 <th scope="row">
                                   
-                                  <div >
-                                    {{i.tableid}}
+                                  <div>
+                                    {{i.menuId}}
                                   </div>
                                 </th>
                                 <td>
                                   
                                   <div >
-                                    {{i.tableno}}
+                                    {{i.foodName}}
                                   </div>
                                 </td>
                                 <td>
-                                 
-                                  <div>
-                                    {{i.book}}
+                                  
+                                  <div >
+                                    {{i.foodPrice}}
                                   </div>
                                 </td>
                                 
                                 <td>
-                                  <button class="btn btn-primary" (click)="unbook(i)" >unbook</button>
+                                    <button class="btn btn-danger" (click)="Deletemenu(i)" >Delete</button>
                                 </td>
                           
-                             
-                            </tr>
-                            
-              
-                          </tbody>
-                        </table>     
+                              </tr>
+                            </tbody>
+                          </table>
+                                   
                         
                         
                         <hr>
@@ -84,8 +75,6 @@
   </div>
   </div>
   </div>
-
-
 
 
 
