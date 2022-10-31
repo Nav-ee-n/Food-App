@@ -1,0 +1,64 @@
+
+<br><br><br><br>
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+      <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+          <table class="table" border="3">
+            <thead>
+              <tr>
+                <th scope="col">SI No</th>
+                <th scope="col">Table No</th>
+                <th scope="col">Status</th>
+
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of table">
+                <th scope="row">
+                  <div *ngIf="i.isEdit">
+                    <input type="text" name="tid" class="form-control" [(ngModel)]="i.tableid">
+                  </div>
+                  <div *ngIf="!i.isEdit">
+                    {{i.tableid}}
+                  </div>
+                </th>
+                <td>
+                  <div *ngIf="i.isEdit">
+                    <input type="text" name="tno" class="form-control" [(ngModel)]="i.tableno">
+                  </div>
+                  <div *ngIf="!i.isEdit">
+                    {{i.tableno}}
+                  </div>
+                </td>
+                <td>
+                  <div *ngIf="i.isEdit">
+                    <input type="text" name="status" class="form-control" [(ngModel)]="i.book"  >
+                  </div>
+                  <div *ngIf="!i.isEdit">
+                    {{i.book}}
+                  </div>
+                </td>
+                
+                <td>
+                  <button class="btn btn-primary" (click)="book(i)">Book</button>
+                </td>
+          
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

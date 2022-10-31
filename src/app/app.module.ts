@@ -15,6 +15,12 @@ import { BookingComponent } from './booking/booking.component';
 import { RestloginComponent } from './restlogin/restlogin.component';
 import { RestviewComponent } from './restview/restview.component';
 import { AdminComponent } from './admin/admin.component';
+import { Rest1Component } from './rest1/rest1.component';
+import { Rest2Component } from './rest2/rest2.component';
+import { Rest3Component } from './rest3/rest3.component';
+import { RestableComponent } from './restable/restable.component';
+import { TableComponent } from './table/table.component';
+import { AdmintableComponent } from './admins/admintable/admintable.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { AdminComponent } from './admin/admin.component';
     BookingComponent,
     RestloginComponent,
     RestviewComponent,
-    AdminComponent
+    AdminComponent,
+    Rest1Component,
+    Rest2Component,
+    Rest3Component,
+    RestableComponent,
+    TableComponent,
+    AdmintableComponent
   ],
   imports: [
     BrowserModule,

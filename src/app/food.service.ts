@@ -22,4 +22,18 @@ export class FoodService {
   rlogin(t2:any){
     return this.http.post<any>('http://localhost:3000/restaurant',t2)
   }
+
+  Submit(i:any){
+    return this.http.post<any>('http://localhost:3000/table',i)
+  }
+
+  viewtable(){
+    return this.http.get<any>('http://localhost:3000/viewtable',)
+  }
+
+  updatetable(i:any){
+    return this.http.put<any>('http://localhost:3000/updatetable/'+i._id,i)
+  }
+
+
 }

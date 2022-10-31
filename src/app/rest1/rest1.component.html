@@ -1,0 +1,94 @@
+
+
+<br><br><br><br>
+
+
+
+
+
+
+<!--
+<div class="container">
+    <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+  
+        <div class="row">
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+              <thead class="table-secondary">
+                <tr>
+                  <th scope="col">SI No</th>
+                <th scope="col">Table No</th>
+                <th scope="col">Status</th>
+                <th scope="col">Select</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of data">
+                  <th scope="row">
+                    <div *ngIf="i.isEdit">
+                      <input type="text" name="name" class="form-control" [(ngModel)]="i.signname">
+                    </div>
+                    <div *ngIf="!i.isEdit">
+                      {{i.signname}}
+                    </div>
+                  </th>
+
+                  <td>
+                    <div *ngIf="i.isEdit">
+                      <input type="text" name="address" class="form-control" [(ngModel)]="i.signpassword"  >
+                    </div>
+                    <div *ngIf="!i.isEdit">
+                      {{i.signpassword}}
+                    </div>
+                  </td>
+
+                  <td>
+                    <div *ngIf="i.isEdit">
+                      <input type="text" name="register" class="form-control" [(ngModel)]="i.signphonenumber">
+                    </div>
+                    <div *ngIf="!i.isEdit">
+                      {{i.signphonenumber}}
+                    </div>
+                  </td>
+                  <td>
+                    <div *ngIf="i.isEdit">
+                      <input type="text" name="address" class="form-control" [(ngModel)]="i.signemail"  >
+                    </div>
+                    <div *ngIf="!i.isEdit">
+                      {{i.signemail}}
+                    </div>
+                  </td>
+                
+                  <td>
+                    <div *ngIf="!i.isEdit">
+                      <table class="g-3">
+                        <tr>
+                          <td><button class="btn btn-primary" (click)="onEdit(i)">Edit</button></td>
+                          &nbsp;
+                          <td><button class="btn btn-danger"  (click)="DeleteMenu(i)">Delete</button></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div *ngIf="i.isEdit">
+                      <table class="g-3">
+                        <tr>
+                          <td><button class="btn btn-primary" (click)="UpdateMenu(i)">save</button></td>
+                          &nbsp;
+                          <td> <button class="btn btn-danger" (click)="i.isEdit = false">cancel</button></td>
+                        </tr>
+                      </table>
+                    </div>
+                    
+                  
+                  </td>
+                  
+                </tr>
+              </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
