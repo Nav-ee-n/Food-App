@@ -1,66 +1,82 @@
 
 
+
+
+
+
 <br><br><br><br>
 
 
 
-
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-
-      <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-          <table class="table" border="3">
-            <thead>
-              <tr>
-                <th scope="col">SI No</th>
-                <th scope="col">Table No</th>
-                <th scope="col">Status</th>
-                <th scope="col"><button class="btn btn-success"  routerLink="/restable" >Add table</button></th>
-
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let i of table">
-                <th scope="row">
-                  <div *ngIf="i.isEdit">
-                    <input type="text" name="tid" class="form-control" [(ngModel)]="i.tableid">
+<div class="main">
+    <div class="container">
+      <div class="row ">
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 g-3 ">
+              <div class="row">
+                <div class=" col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 ">
+                  <app-navbar3></app-navbar3>
                   </div>
-                  <div *ngIf="!i.isEdit">
-                    {{i.tableid}}
-                  </div>
-                </th>
-                <td>
-                  <div *ngIf="i.isEdit">
-                    <input type="text" name="tno" class="form-control" [(ngModel)]="i.tableno">
-                  </div>
-                  <div *ngIf="!i.isEdit">
-                    {{i.tableno}}
-                  </div>
-                </td>
-                <td>
-                  <div *ngIf="i.isEdit">
-                    <input type="text" name="status" class="form-control" [(ngModel)]="i.book"  >
-                  </div>
-                  <div *ngIf="!i.isEdit">
-                    {{i.book}}
-                  </div>
-                </td>
-                
-                <td>
-                  <button class="btn btn-primary" >unbook</button>
-                </td>
+                <div class="col col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10 ">
+                  
+                  <div class="container " >
+                    <table class="table" border="3">
+                      <thead>
+                        <tr>
+                          <th scope="col">Restaurant No</th>
+                          <th scope="col">Restaurant Name</th>
+                          <th scope="col">Restaurant Username</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">Location</th>
+                        </tr>
+                      
+                      <tbody>
+                        <tr *ngFor="let i of res">
+                          <th scope="row">
+                            
+                            <div>
+                              {{i.rid}}
+                            </div>
+                          </th>
+                          <td>
+                            
+                            <div >
+                              {{i.rname}}
+                            </div>
+                          </td>
+                          <td>
+                            
+                            <div >
+                              {{i.runame}}
+                            </div>
+                          </td>
+                          <td>
+                            
+                            <div >
+                              {{i.phoneno}}
+                            </div>
+                          </td>
+                          <td>
+                            
+                            <div >
+                              {{i.location}}
+                            </div>
+                          </td>
+                          
+                          
           
-
-            </tbody>
-          </table>
-        </div>
+                      </tbody>
+                    </table>
+                        
+                        
+                    
+                
+          </div>
+              </div>
       </div>
-    </div>
   </div>
-</div>
+  </div>
+  </div>
+
+
+
+

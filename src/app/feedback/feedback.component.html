@@ -1,0 +1,33 @@
+
+
+
+
+
+
+<br /><br /><br />
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <form #feedbackform="ngForm">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name : </label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Feedback</label>
+                <textarea class="form-control" name="feedback" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="feedback.fdk"></textarea>
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-primary" (click)="addfeedback()">Submit</button>
+
+            </div>
+        </form>
+
+
+        </div>
+    </div>
+</div>

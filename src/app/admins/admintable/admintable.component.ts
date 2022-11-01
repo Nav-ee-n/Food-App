@@ -10,16 +10,11 @@ export class AdmintableComponent implements OnInit {
   log:any=[]
 
   constructor(private api:FoodService) { 
-    this.log=this.api.getUser()
-    console.log(this.log)
-    if(this.log){
-      console.log("hai")
-      console.log(this.log)
-    }
-    this.api.viewtable(this.log).subscribe(
+    
+    this.api.viewrestaurant().subscribe(
       (data)=>{
         console.log(data)
-        this.table=data
+        this.res=data
       }
     )
   }
@@ -29,6 +24,6 @@ export class AdmintableComponent implements OnInit {
   }
 
  
-  table:any=[]
+  res:any=[]
 
 }

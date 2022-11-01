@@ -38,6 +38,11 @@ export class Rest1Component implements OnInit {
     this.router.navigate(['/viewmenu'])
   }
 
+  feedback(i:any){
+    this.api.savemenu(i[0])
+    this.router.navigate(['/feedback'])
+  }
+
   table:any=[]
 
 }

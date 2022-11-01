@@ -8,8 +8,13 @@ import { FoodService } from '../food.service';
 })
 export class ViewmenuComponent implements OnInit {
  log:any=[]
+ user:any=[]
   constructor(private api:FoodService) {
     this.log=this.api.getmenu()
+    this.user=this.api.client()
+    
+    console.log(this.user)
+    console.log("hi")
     console.log(this.log)
     if(this.log){
       console.log(this.log.rname)
@@ -20,12 +25,31 @@ export class ViewmenuComponent implements OnInit {
         }
       )
     }
+    if(this.user){
+      console.log("hai")
+      console.log("user" +this.user)
+      this.data2.signname=this.user.signname
+
+    }
     
    }
 
   ngOnInit(): void {
   }
 
+  order(i:any){
+    console.log(this.user)
+    console.log(this.data2)
+    i.signname=this.data2.signname
+    console.log(i)
+    this.api.Order(i).subscribe(
+      (data)=>{
+        console.log(data)
+      }
+    )
+  }
+
   data1:any=[]
+  data2:any=[]
 
 }

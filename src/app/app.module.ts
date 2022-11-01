@@ -25,6 +25,12 @@ import { AddmenuComponent } from './addmenu/addmenu.component';
 import { MenutableComponent } from './menutable/menutable.component';
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ViewfeedbackComponent } from './viewfeedback/viewfeedback.component';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { Navbar3Component } from './navbar3/navbar3.component';
+import { AdminfeedbackComponent } from './adminfeedback/adminfeedback.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +54,13 @@ import { ViewmenuComponent } from './viewmenu/viewmenu.component';
     AddmenuComponent,
     MenutableComponent,
     AdminnavbarComponent,
-    ViewmenuComponent
+    ViewmenuComponent,
+    ViewOrderComponent,
+    FeedbackComponent,
+    ViewfeedbackComponent,
+    Navbar2Component,
+    Navbar3Component,
+    AdminfeedbackComponent
   ],
   imports: [
     BrowserModule,

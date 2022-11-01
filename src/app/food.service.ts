@@ -8,6 +8,7 @@ export class FoodService {
 
   USER_KEY:any=[]
   Menu:any=[]
+  Client:any=[]
 
   constructor(private http:HttpClient) { }
 
@@ -36,6 +37,17 @@ export class FoodService {
       return JSON.parse(menu);
     }
   }
+  
+  public saveclient(client: any): void {
+   this.Client=client
+  }
+
+
+  public client():any{
+    return this.Client
+  }
+
+
 
   Custcreate(sign:any)
   {
@@ -77,6 +89,32 @@ export class FoodService {
 
   deletemenu(i:any){
     return this.http.delete<any>('http://localhost:3000/deletemenu/'+i._id)
+  }
+
+  Order(i:any){
+    return this.http.post<any>('http://localhost:3000/order',i)
+  }
+
+  vieworder(i:any){
+    return this.http.post<any>('http://localhost:3000/vieworder',i)
+  }
+
+  deleteorder(i:any){
+    return this.http.delete<any>('http://localhost:3000/deleteorder/'+i._id)
+  }
+
+  Addfeedback(i:any){
+    return this.http.post<any>('http://localhost:3000/addfeedback',i)
+  }
+  viewfeedback(i:any){
+    return this.http.post<any>('http://localhost:3000/viewfeedback',i)
+  }
+  viewrestaurant(){
+    return this.http.get<any>('http://localhost:3000/viewrestaurant')
+  }
+
+  adminfeedback(){
+    return this.http.get<any>('http://localhost:3000/adminfeedback')
   }
 
 }
