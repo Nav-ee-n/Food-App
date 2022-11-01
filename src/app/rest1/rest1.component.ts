@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FoodService } from '../food.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class Rest1Component implements OnInit {
     rname:"Zam Zam"
   }
 
-  constructor(private api:FoodService) {
+  constructor(private api:FoodService,
+    private router:Router) {
     this.api.viewtable(this.rdata).subscribe(
       (data)=>{
         console.log(data)
@@ -31,7 +33,11 @@ export class Rest1Component implements OnInit {
       }
     )
   }
-  
+  menu(i:any){
+    this.api.savemenu(i[0])
+    this.router.navigate(['/viewmenu'])
+  }
+
   table:any=[]
 
 }

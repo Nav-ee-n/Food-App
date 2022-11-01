@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class FoodService {
 
   USER_KEY:any=[]
+  Menu:any=[]
 
   constructor(private http:HttpClient) { }
 
@@ -21,6 +22,18 @@ export class FoodService {
     const user = window.sessionStorage.getItem(this.USER_KEY);
     if (user) {
       return JSON.parse(user);
+    }
+  }
+  public savemenu(menu: any): void {
+    window.sessionStorage.removeItem(this.Menu);
+    window.sessionStorage.setItem(this.Menu, JSON.stringify(menu));
+
+  }
+
+  public getmenu(): any {
+    const menu = window.sessionStorage.getItem(this.Menu);
+    if (menu) {
+      return JSON.parse(menu);
     }
   }
 

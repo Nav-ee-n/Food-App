@@ -24,6 +24,7 @@ import { AdmintableComponent } from './admins/admintable/admintable.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { MenutableComponent } from './menutable/menutable.component';
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
+import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
     AdmintableComponent,
     AddmenuComponent,
     MenutableComponent,
-    AdminnavbarComponent
+    AdminnavbarComponent,
+    ViewmenuComponent
   ],
   imports: [
     BrowserModule,
