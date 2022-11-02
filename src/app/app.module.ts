@@ -31,6 +31,8 @@ import { ViewfeedbackComponent } from './viewfeedback/viewfeedback.component';
 import { Navbar2Component } from './navbar2/navbar2.component';
 import { Navbar3Component } from './navbar3/navbar3.component';
 import { AdminfeedbackComponent } from './adminfeedback/adminfeedback.component';
+import { AdminsecondComponent } from './adminsecond/adminsecond.component';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { AdminfeedbackComponent } from './adminfeedback/adminfeedback.component'
     ViewfeedbackComponent,
     Navbar2Component,
     Navbar3Component,
-    AdminfeedbackComponent
+    AdminfeedbackComponent,
+    AdminsecondComponent,
+    
   ],
   imports: [
     BrowserModule,

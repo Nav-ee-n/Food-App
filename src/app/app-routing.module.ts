@@ -21,6 +21,7 @@ import { ViewOrderComponent } from './view-order/view-order.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ViewfeedbackComponent } from './viewfeedback/viewfeedback.component';
 import { AdminfeedbackComponent } from './adminfeedback/adminfeedback.component';
+import { AdminsecondComponent } from './adminsecond/adminsecond.component';
 
 const routes: Routes = [{path:"",component:HomeComponent},
 {path:"login",component:LoginComponent},
@@ -42,8 +43,8 @@ const routes: Routes = [{path:"",component:HomeComponent},
 {path:"vieworder",component:ViewOrderComponent},
 {path:"feedback",component:FeedbackComponent},
 {path:"viewfeedback",component:ViewfeedbackComponent},
-{path:"adminfeedback",component:AdminfeedbackComponent}
-
+{path:"adminfeedback",component:AdminfeedbackComponent},
+{path:"adminsecond",component:AdminsecondComponent}
 ];
 
 @NgModule({
